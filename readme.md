@@ -2,6 +2,9 @@
 
 > A lightweight open-sourced POSTMAN alternative
 
+<img src="electron-app/images/archer-logo.png" width="250px" alt="Archer Logo">
+
+This is a proof of concept right now. It's not ready to be used as a tool yet.
 
 ## Dev
 
