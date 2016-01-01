@@ -1,0 +1,47 @@
+html, body {
+	padding: 10px;
+	margin: 0;
+}
+
+#result {
+	height: 300px;
+	width: 100%;
+	word-wrap: break-word;
+	overflow-y: scroll;
+}
+
+.sidebar-item-label {
+	font-size:0.8em;
+	height: 20px;
+	width: 50px;
+}
+
+.sidebar-item {
+	width:100%;
+	min-height: 50px;	
+}
+
+.sidebar-url {
+	font-size: 0.8em;
+	word-wrap: break-word;
+}
+
+.get-label {
+
+}
+
+.post-label {
+	
+}
+
+.patch-label {
+	
+}
+
+.put-label {
+	
+}
+
+.delete-label {
+	
+}

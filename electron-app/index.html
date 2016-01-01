@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Archer</title>
+		<link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+    <link href="bower_components/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+    <div class="row">
+      <div class="col-xs-3">
+        <!-- <input class="form-control" type="text" placeholder="Search" id="search"> -->
+        <h4>HISTORY</h4>
+        <div id="sidebar-list">
+          
+        </div>
+      </div>
+      <div class="col-xs-9">
+        <h4>REQUEST</h4>
+        <form class="form-inline" id="request-form">
+          <select class="form-control" id="request-method" style="margin-left: 10px;">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+
+          <input type="text" class="form-control" placeHolder="Enter Request URL here" id="request-url" style="margin-left: 10px; width:350px">
+          <button type="submit" style="margin-left: 10px;" id="send-btn" class="btn btn-large btn-info btn-raised">Send <i class="mdi mdi-send"></i><span class="icon icon-paper-plane"></span></button>
+          <!-- <button id="save-btn" class="btn btn-large btn-success btn-raised">Save <i class="mdi mdi-floppy"></i><span class="icon icon-floppy"></span></button> -->
+        </form>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Parameters
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body" id="params-body">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <input type="text" placeHolder="Key" class="form-control">
+                        <input type="text" placeHolder="Key" class="form-control">
+                        <input type="text" placeHolder="Key" class="form-control">
+                        <input type="text" placeHolder="Key" class="form-control">
+                      </div>
+                      <div class="col-xs-6">
+                        <input type="text" placeHolder="Value" class="form-control">
+                        <input type="text" placeHolder="Value" class="form-control">
+                        <input type="text" placeHolder="Value" class="form-control">
+                        <input type="text" placeHolder="Value" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h4>RESULT:</h3>
+            <div class="togglebutton">
+              <label>
+                <input type="checkbox" checked> Pretty Print
+              </label>
+            </div>
+            <div style="margin-top:10px;">Content Type:
+              <select id="contentType">
+                <option value="HTML">HTML</option>
+                <option value="JSON">JSON</option>
+                <option value="XML">XML</option>
+                <option value="Text">Text</option>
+              </select>
+            </div>
+
+            <ul class="nav nav-tabs" style="margin-top:10px;">
+              <li role="presentation" class="active"><a href="#">Body</a></li>
+              <li role="presentation" class="disabled"><a href="#">Headers</a></li>
+            </ul>
+
+            <div id="result" class="well">
+              <code>
+                Results will appear here..
+              </code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
+
+<script>
+  // include jQuery
+  window.$ = window.jQuery = require('jquery');
+  console.log( [$, jQuery ]);
+</script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<script>
+  $.material.init();
+</script>
+<script src="js/requests.js" type="text/javascript"></script>
