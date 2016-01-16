@@ -6,15 +6,11 @@
 
 This is a proof of concept right now. It's not ready to be used as a tool yet.
 
-## Dev
+## Run
 
 ```
+$ bower install
 $ npm install
-```
-
-### Run
-
-```
 $ npm start
 ```
 
